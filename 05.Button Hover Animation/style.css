@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  background-color: #5fb0fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #afa3a3;
+}
+
+button {
+  position: relative;
+  border-radius: 1.5vw;
+  font-size: 2.5vw;
+  color: #111;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 1vw 1.5vw;
+}
+button:hover {
+  color: #fff;
+  z-index: 1;
+  background-size: 400%;
+  border-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    #6bb2d1,
+    #63b1d9,
+    #5eb0e1,
+    #5aafe9,
+    #5badf0,
+    #5cadf3,
+    #5eacf7,
+    #61acfa,
+    #60adfa,
+    #60affb,
+    #5fb0fb,
+    #5fb1fb
+  );
+  box-shadow: 0 0 1vw rgb(2, 4, 24);
+  animation: backHover 12s linear forwards infinite;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  left: -1px;
+  background: inherit;
+  filter: blur(36px);
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+
+button:hover::before {
+    opacity: 1;
+    z-index: -1;
+  }
+  
+@keyframes backHover {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 400%;
+  }
+}

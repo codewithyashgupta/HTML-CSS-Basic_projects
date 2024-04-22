@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(77, 172, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container p{
+    font-size: 3vw;
+    -webkit-text-stroke: 1px royalblue;
+    color: transparent;
+    text-transform: uppercase;
+    animation: textAimate 2s linear infinite;
+    animation-delay: calc(-.25s * var(--i));
+}
+@keyframes textAimate {
+    0%,
+    10% {
+      color: rgb(21, 76, 241);
+      filter: hue-rotate(0deg);
+    }
+    10.5% {
+      color: transparent;
+    }
+    100% {
+      color: transparent;
+      filter: hue-rotate(720deg);
+    }
+}

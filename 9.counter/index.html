@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>counter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-[#084177]"
+    >
+      <div class="text-[27px] text-[#FBC490]">Increment and Decrement</div>
+
+      <div
+        class="bg-[#CD8D7B] flex text-[27px] text-[#FBC490] rounded-sm gap-12 p-2 px-5 mt-2"
+      >
+        <button onclick="decrement()" class="border-r-2 pr-5 border-[#FBC490]">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+
+        <div id="counter" class="font-bold">0</div>
+
+        <button onclick="increment()" class="border-l-2 pl-5 border-[#FBC490]">
+          <i class="fa-light fa-plus"></i>
+        </button>
+      </div>
+      <button
+        class="flex items-center mt-3 bg-[#CD8D7B] text-[#FBC490] pl-5 pr-5 text-[27px]"
+        onclick="reset()"
+      >
+        Reset
+      </button>
+    </div>
+    <script>
+      let counter = document.querySelector('#counter')
+
+      let increment = () => {
+          let value = parseInt(counter.innerText);
+          value = value  + 1;
+          counter.innerText = value;
+      }
+
+      let decrement = () => {
+          let value = parseInt(counter.innerText);
+          value = value  - 1;
+          counter.innerText = value;
+      }
+      let reset = () => {
+        let number = 0;
+        document.querySelector("#counter").innerHTML = number;
+      }
+    </script>
+  </body>
+</html>

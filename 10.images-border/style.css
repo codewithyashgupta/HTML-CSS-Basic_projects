@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.gola{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(245, 154, 19) , rgb(245, 82, 82) , rgb(128, 122, 122) , rgba(177, 177, 15, 0.774) , rgba(22, 22, 255, 0.199));
+    padding: 5px;
+}
+
+.gola img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
